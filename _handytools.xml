@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HandyTools>
+	<UnifyLineFeed>
+		<Code lang="C/C++">
+			LF
+		</Code>
+		<Code lang="CSharp">
+			LF
+		</Code>
+		<Code lang="Others">
+			LF
+		</Code>
+	</UnifyLineFeed>
+	<UnifyEncoding>
+		<Encoding>UTF8</Encoding>
+	</UnifyEncoding>
+	<AI>
+		<ModelGeneral>phi3</ModelGeneral>
+		<ModelGeneration>codegemma</ModelGeneration>
+		<ModelTranslation>phi3</ModelTranslation>
+		<ApiEndpoint>http://192.168.128.129:9090/</ApiEndpoint>
+        <CompletionEndpoint>http://192.168.128.129:9091/</CompletionEndpoint>
+		<PromptCompletion>&lt;|fim_prefix|&gt;{prefix}&lt;|fim_suffix|&gt;{suffix}&lt;|fim_middle|&gt;</PromptCompletion>
+		<PromptExplanation>Explain the next {filetype} code.\ncode:{content}</PromptExplanation>
+		<PromptTranslation>Translate in English\n\n{content}</PromptTranslation>
+		<PromptDocumentation>Create a doxygen comment for the following C++ Function. doxygen comment only\n\n{content}</PromptDocumentation>
+		<Temperature>0.1</Temperature>
+		<MaxTextLength>2000</MaxTextLength>
+		<RealTimeCompletion>True</RealTimeCompletion>
+		<MaxCompletionInputSize>4000</MaxCompletionInputSize>
+		<MaxCompletionOutputSize>64</MaxCompletionOutputSize>
+	</AI>
+</HandyTools>
