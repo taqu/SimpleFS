@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.25)
+project(thirdparty NONE)
+include(ExternalProject)
+
+ExternalProject_Add(mimalloc
+    GIT_REPOSITORY https://github.com/microsoft/mimalloc.git
+    GIT_TAG v2.1.7
+    PREFIX "${THIRDPARTY_DIR}/mimalloc"
+    CMAKE_ARGS "-DCMAKE_INSTALL_PREFIX=${THIRDPARTY_DIR}/mimalloc"
+        "-DCMAKE_DEBUG_POSTFIX=d"
+)
+
